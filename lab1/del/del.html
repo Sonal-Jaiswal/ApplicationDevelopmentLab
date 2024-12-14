@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acer University</title>
+    <style>
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body and layout */
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* Header and Footer */
+        header, footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        header img {
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #003366;
+            text-align: center;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('kiit55.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Content Section */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <img src="logo_Acer.jpeg" alt="Acer University Logo">
+        <h1>Acer University</h1>
+    </header> -->
+    <header>
+        <!-- <h1> <img src="logo_Acer.jpeg">  Acer University</h1> -->
+        <img src="logo_Acer.jpeg" style="position: absolute; top: 0; left: 0; ">   
+        <h1 style="margin: 0; line-height: 100px; font-size: 24px;">Acer University</h1>   
+    </header>
+
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#programs">Programs</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Acer University</h1>
+        <p>Empowering students for a brighter future</p>
+    </div>
+    <div class="content">
+        <div id="about" class="section">
+            <img src="logo_Acer.jpeg" alt="About Us">
+            <h2>About Us</h2>
+            <p>Learn about our mission, vision, and values.</p>
+        </div>
+        <div id="programs" class="section">
+            <img src="logo_Acer.jpeg" alt="Programs">
+            <h2>Programs</h2>
+            <p>Explore a wide range of courses and programs.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Acer University. All Rights Reserved.</p>
+        <p>Email: admissions@aceruniversity.edu | Phone: +91 7587880316</p>
+    </footer>
+</body>
+</html>

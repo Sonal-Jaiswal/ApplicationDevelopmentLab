@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acer University</title>
+    <style>
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        header, footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        header img {
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #003366;
+            text-align: center;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('kiit55.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .lists-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .list-box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        .list-box h2 {
+            font-size: 24px;
+            color: #004080;
+        }
+
+        .list-box ul, .list-box ol, .list-box dl {
+            margin-left: 20px;
+        }
+
+        .divider {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo_Acer.jpeg" alt="Acer University Logo">
+        <h1>Acer University</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#lists">Lists</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to Acer University</h1>
+        <p>Empowering students for a brighter future</p>
+    </div>
+
+    <div class="content">
+        <div id="lists" class="lists-container">
+            <div class="list-box">
+                <h2>Ordered & Unordered Lists</h2>
+                <h3>1. Ordered List</h3>
+                <ol>
+                    <li>Apply for Admission</li>
+                    <li>Complete Entrance Exam</li>
+                    <li>Check Results</li>
+                    <li>Join Orientation</li>
+                </ol>
+
+                <h3>2. Unordered List</h3>
+                <ul>
+                    <li>Campus Facilities</li>
+                    <li>Hostel Accommodation</li>
+                    <li>Sports Complex</li>
+                    <li>Library Services</li>
+                </ul>
+            </div>
+
+            <div class="list-box">
+                <h2>Description & Nested Lists</h2>
+
+                <h3>3. Description List</h3>
+                <dl>
+                    <dt>Undergraduate Programs</dt>
+                    <dd>Courses for Bachelor's Degrees.</dd>
+                    <dt>Postgraduate Programs</dt>
+                    <dd>Courses for Master's and Doctoral Degrees.</dd>
+                    <dt>Professional Certification</dt>
+                    <dd>Short-term specialized courses.</dd>
+                </dl>
+
+                <h3>4. Nested List</h3>
+                <ul>
+                    <li>Engineering
+                        <ul>
+                            <li>Computer Science</li>
+                            <li>Electronics</li>
+                            <li>Mechanical</li>
+                        </ul>
+                    </li>
+                    <li>Management
+                        <ul>
+                            <li>Business Administration</li>
+                            <li>Finance</li>
+                            <li>Marketing</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+
+    <footer>
+        <p>&copy; 2024 Acer University. All Rights Reserved.</p>
+        <p>Email: admissions@aceruniversity.edu | Phone: +91 7587880316</p>
+    </footer>
+</body>
+</html>
