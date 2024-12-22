@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acer University Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 50%;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: auto;
+      background-color: #003366;
+      color: white;
+      cursor: pointer;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #00509e;
+    }
+    .thank-you {
+      text-align: center;
+      padding: 30px;
+      background-color: #e0f7fa;
+      border: 2px solid #00acc1;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Acer University Registration Form</h1>
+    <form id="registration-form" action="#" method="post">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="qualification">Qualification</label>
+      <input type="radio" name="qualification" value="Undergraduate" required> Undergraduate
+      <input type="radio" name="qualification" value="Postgraduate"> Postgraduate
+
+      <label for="program">Program of Interest</label>
+      <select id="program" name="program" required>
+        <option value="">-- Select Program --</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="MBA">MBA</option>
+        <option value="PhD">PhD</option>
+      </select>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+
+      <label for="resume">Upload Resume</label>
+      <input type="file" id="resume" name="resume">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" minlength="8" required>
+
+      <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions
+      </label>
+
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+    </form>
+  </div>
+
+  <div class="thank-you" id="thank-you-message" style="display: none;">
+    <h2>Thank You for Registering!</h2>
+    <p>Your registration has been successfully submitted. We will get back to you soon.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById('registration-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      thankYouMessage.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

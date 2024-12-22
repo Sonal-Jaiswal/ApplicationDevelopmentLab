@@ -1,0 +1,195 @@
+/* General Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header, footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+header img {
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+footer p {
+  font-size: 14px;
+}
+
+
+.hero {
+  background: url('kiit55.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+  background-color: #003366;
+  text-align: center;
+  padding: 0.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background for the page */
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #003366; /* Dark blue color for the heading */
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Group Styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555; /* Medium gray color for labels */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  textarea,
+  select,
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border for input fields */
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333; /* Dark text color for readability */
+  }
+  
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Button Styles */
+  input[type="submit"],
+  input[type="reset"] {
+    width: auto;
+    background-color: #003366; /* Dark blue background for buttons */
+    color: white;
+    cursor: pointer;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #00509e; /* Lighter blue on hover */
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin: 0 8px 0 0; 
+    vertical-align: right;
+  }
+  
+  .checkbox-group label {
+    margin: 0; 
+  }
+  
+  /* Select Styling */
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    resize: vertical;
+  }
+  
+  /* Thank You Message */
+  .thank-you {
+    text-align: center;
+    padding: 30px;
+    background-color: #e0f7fa; /* Light cyan background for the thank-you box */
+    border: 2px solid #00acc1; /* Cyan border to match the background */
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 20px;
+    }
+    
+    input[type="submit"],
+    input[type="reset"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  
