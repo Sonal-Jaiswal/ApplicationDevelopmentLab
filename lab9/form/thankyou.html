@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Thank you for your submission!</h2>
+        <p id="rollno"></p>
+        <p id="contact"></p>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            let params = new URLSearchParams(window.location.search);
+            return {
+                rollno: params.get("rollno"),
+                contact: params.get("contact")
+            };
+        }
+
+        let { rollno, contact } = getQueryParams();
+
+        document.getElementById("rollno").innerHTML = `<strong>Roll Number:</strong> ${rollno}`;
+        document.getElementById("contact").innerHTML = `<strong>Contact Number:</strong> ${contact}`;
+    </script>
+</body>
+</html>

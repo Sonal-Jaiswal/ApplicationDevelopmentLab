@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { padding: 40px; border: 2px solid #ddd; border-radius: 10px; text-align: center; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); width: 400px; }
+        input { display: block; margin: 20px auto; padding: 10px; width: 90%; font-size: 1.2em; }
+        button { margin: 15px; padding: 12px; font-size: 1.2em; cursor: pointer; width: 40%; }
+        h2 { font-size: 2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Validation</h2>
+        <form id="userForm">
+            <input type="text" id="rollno" placeholder="Enter Roll Number" required>
+            <input type="email" id="email" placeholder="Enter Email ID" required>
+            <input type="text" id="contact" placeholder="Enter Contact No" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let rollno = document.getElementById("rollno").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let contact = document.getElementById("contact").value.trim();
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let contactPattern = /^[0-9]{10}$/;
+
+            if (!rollno || !email || !contact) {
+                alert("All fields are required");
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid email ID");
+                return;
+            }
+            if (!contactPattern.test(contact)) {
+                alert("Contact number must be 10 digits");
+                return;
+            }
+
+            // Redirect to thankyou.html with form data in URL parameters
+            window.location.href = `thankyou.html?rollno=${encodeURIComponent(rollno)}&contact=${encodeURIComponent(contact)}`;
+        });
+    </script>
+</body>
+</html>

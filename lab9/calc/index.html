@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { padding: 40px; border: 2px solid #ddd; border-radius: 10px; text-align: center; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); width: 400px; }
+        input { display: block; margin: 20px auto; padding: 10px; width: 90%; font-size: 1.2em; }
+        button { margin: 15px; padding: 12px; font-size: 1.2em; cursor: pointer; width: 40%; }
+        h2 { font-size: 2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+        <input type="number" id="operand1" placeholder="Enter first number">
+        <input type="number" id="operand2" placeholder="Enter second number">
+        <button onclick="calculate('add')">Add</button>
+        <button onclick="calculate('subtract')">Subtract</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+    
+    <script>
+        function calculate(operation) {
+            let num1 = parseFloat(document.getElementById("operand1").value);
+            let num2 = parseFloat(document.getElementById("operand2").value);
+            let resultField = document.getElementById("result");
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers");
+                return;
+            }
+            resultField.value = operation === 'add' ? num1 + num2 : num1 - num2;
+        }
+    </script>
+</body>
+</html>
